@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.appBody{
+  text-align: center;
+}
+
+.main-container {
+  width: clamp(90%, 50vh,750px);
+  margin: auto;
+}

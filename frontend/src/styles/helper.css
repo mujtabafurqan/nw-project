@@ -1,0 +1,49 @@
+/*=========== Pads and Paddings======= */
+.mtxs {margin-top: 2px !important}
+.mts {margin-top: 4px !important}
+.mtm {margin-top: 8px !important}
+.mtl {margin-top: 20px !important}
+.mtxl {margin-top: 48px !important}
+
+.mbxs {margin-bottom: 2px !important}
+.mbs {margin-bottom: 4px !important}
+.mbm {margin-bottom: 8px !important}
+.mbl {margin-bottom: 20px !important}
+.mbxl {margin-bottom: 48px !important}
+
+.mlxs {margin-left: 2px !important}
+.mls {margin-left: 4px !important}
+.mlm {margin-left: 8px !important}
+.mll {margin-left: 20px !important}
+.mlxl {margin-left: 48px !important}
+
+.mrxs {margin-right: 2px !important}
+.mrs {margin-right: 4px !important}
+.mrm {margin-right: 8px !important}
+.mrl {margin-right: 20px !important}
+.mrxl {margin-right: 48px !important}
+
+/*---------Padding---------------*/
+.ptxs {padding-top: 2px !important}
+.pts {padding-top: 4px !important}
+.ptm {padding-top: 8px !important}
+.ptl {padding-top: 20px !important}
+.ptxl {padding-top: 48px !important}
+
+.pbxs {padding-bottom: 2px !important}
+.pbs {padding-bottom: 4px !important}
+.pbm {padding-bottom: 8px !important}
+.pbl {padding-bottom: 20px !important}
+.pbxl {padding-bottom: 48px !important}
+
+.plxs {padding-left: 2px !important}
+.pls {padding-left: 4px !important}
+.plm {padding-left: 8px !important}
+.pll {padding-left: 20px !important}
+.plxl {padding-left: 48px !important}
+
+.prxs {padding-right: 2px !important}
+.prs {padding-right: 4px !important}
+.prm {padding-right: 8px !important}
+.prl {padding-right: 20px !important}
+.prxl {padding-right: 48px !important}
