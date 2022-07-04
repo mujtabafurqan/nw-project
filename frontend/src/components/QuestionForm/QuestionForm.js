@@ -16,7 +16,7 @@ export default function QuestionForm() {
             description: e.target.formBasicDescription.value,
             potName: potName
         };
-        await fetch("http://localhost:5003/question/add", {
+        await fetch("http://localhost:5003/api/question/add", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

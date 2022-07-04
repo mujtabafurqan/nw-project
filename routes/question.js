@@ -22,7 +22,13 @@ questionRoutes.route("/question").get(function (req, res) {
 //    });
   
   questionModel.find({}, (err, questions) => {
-    res.send(questions);
+    console.log(questions);
+    if (err) {
+      console.log(err);
+      res.status(500).send(err);
+    } else {
+      res.send(questions);
+    }
   });  
 });
  

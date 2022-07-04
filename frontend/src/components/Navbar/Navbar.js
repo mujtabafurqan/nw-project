@@ -8,7 +8,7 @@ export default function NavBarComponent(){
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand onClick={()=>navigate("/")}>NW Project</Navbar.Brand>
+          <Navbar.Brand onClick={()=>navigate("/")}>WenDesk</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

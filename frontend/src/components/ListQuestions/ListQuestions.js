@@ -7,7 +7,7 @@ export default function ListQuestions(){
 
     useEffect(() => {
         async function getQuestions() {
-            const response = await fetch(`http://localhost:5003/question/`);
+            const response = await fetch(`http://localhost:5003/api/question/`);
         
             if (!response.ok) {
               const message = `An error occurred: ${response.statusText}`;
