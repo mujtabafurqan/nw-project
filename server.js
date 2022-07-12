@@ -13,6 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use("/api/",require("./routes/question"));
+app.use("/api/",require("./routes/pot"));
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://mujtabaMongo:passwordkyahai@cluster0.mko8b.mongodb.net/buildspace?retryWrites=true&w=majority');

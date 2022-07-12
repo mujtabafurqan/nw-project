@@ -7,6 +7,10 @@ const questionSchema = new Schema({
     description: String,
     potName: String,
     createdAt: { type: Date, default: Date.now },
+    answers: [{
+        text: String,
+        createdAt: { type: Date, default: Date.now },
+    }],
 });
 
 module.exports = mongoose.model("question", questionSchema);

@@ -12,6 +12,7 @@ export default function Home() {
         <div className='home'>
             <Button variant="outline-primary" onClick={handleAsk}> Ask a Question</Button>
             <Button variant="outline-primary" onClick={() => navigate("/listQuestions")}> List Questions</Button>
+            <Button variant="outline-primary" onClick={() => navigate("/createPot")}> Create a Pot</Button>
         </div>        
     );
 }

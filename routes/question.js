@@ -12,15 +12,6 @@ const ObjectId = require("mongodb").ObjectId;
  
 // This section will help you get a list of all the questions.
 questionRoutes.route("/question").get(function (req, res) {
-//  let db_connect = dbo.getDb("buildspace");
-//  db_connect
-//    .collection("questions")
-//    .find({})
-//    .toArray(function (err, result) {
-//      if (err) throw err;
-//      res.json(result);
-//    });
-  
   questionModel.find({}, (err, questions) => {
     console.log(questions);
     if (err) {
@@ -34,14 +25,23 @@ questionRoutes.route("/question").get(function (req, res) {
  
 // This section will help you get a single question by id
 questionRoutes.route("/question/:id").get(function (req, res) {
- let db_connect = dbo.getDb("buildspace");
- let myquery = { _id: ObjectId( req.params.id )};
- db_connect
-     .collection("questions")
-     .findOne(myquery, function (err, result) {
-       if (err) throw err;
-       res.json(result);
-     });
+//  let db_connect = dbo.getDb("buildspace");
+//  let myquery = { _id: ObjectId( req.params.id )};
+//  db_connect
+//      .collection("questions")
+//      .findOne(myquery, function (err, result) {
+//        if (err) throw err;
+//        res.json(result);
+//      });
+  questionModel.findById(req.params.id, (err, question) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send(err);
+    } else {
+      console.log(question);
+      res.send(question);
+    }
+  });
 });
  
 // This section will help you create a new question.
@@ -82,5 +82,20 @@ questionRoutes.route("/:id").delete((req, response) => {
    response.json(obj);
  });
 });
- 
+
+questionRoutes.route("/addAnswer/:id").post((req, response) => {
+  console.log(req.params.id);
+  questionModel.findById(req.params.id, (err, question) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send(err);
+    } else {
+      console.log(question);
+      question.answers.push(req.body);
+      question.save();
+      response.send(question);
+    }
+  });
+});
+
 module.exports = questionRoutes;

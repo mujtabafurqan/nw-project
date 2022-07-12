@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import Badge from "react-bootstrap/Badge";
+import { useNavigate } from "react-router-dom";
 
 export default function ListQuestions(){
     const [questions, setQuestions] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function getQuestions() {
@@ -16,6 +17,7 @@ export default function ListQuestions(){
             }
         
             const questions = await response.json();
+            console.log(questions);
             setQuestions(questions);
           }
         
@@ -29,7 +31,7 @@ export default function ListQuestions(){
             <h1>List Questions</h1>
             <ListGroup>
             {questions.map(question => (
-                <ListGroup.Item key={question.id}>
+                <ListGroup.Item key={question.id} onClick={() => navigate('/question/'+question._id)}>
                     <div>
                         <h3>{question.title}</h3>
                         <p>{question.description}</p>
