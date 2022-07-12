@@ -4,6 +4,7 @@
 .mtm {margin-top: 8px !important}
 .mtl {margin-top: 20px !important}
 .mtxl {margin-top: 48px !important}
+.mtxxl {margin-top: 60px !important}
 
 .mbxs {margin-bottom: 2px !important}
 .mbs {margin-bottom: 4px !important}
@@ -47,3 +48,9 @@
 .prm {padding-right: 8px !important}
 .prl {padding-right: 20px !important}
 .prxl {padding-right: 48px !important}
+
+/* Flex */
+.flex-row {
+    display: flex;
+    &.vertical-center {align-items: center;}
+}

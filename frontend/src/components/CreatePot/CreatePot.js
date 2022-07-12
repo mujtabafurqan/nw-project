@@ -32,7 +32,7 @@ export default function QuestionForm() {
 
     return (
         <div>
-            <h1>Create a new Pot</h1>
+            <h1 className='mbxl page-title'>Create a new Pot</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>Name</Form.Label>

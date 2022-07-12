@@ -10,9 +10,9 @@ export default function ListPots(){
     
     const [potList, setPotList] = useState([]); 
     let navigate = useNavigate();
-    const handleClick = (id) => {
-        // console.log(id);
-        navigate(`/questionForm/${id}`);
+    const handleClick = (name) => {
+        // console.log(name);
+        navigate(`/questionForm/${name}`);
     }
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function ListPots(){
         <div className="mtxl ">
         <ListGroup >
             {potList.map((pot, id) => 
-            <ListGroup.Item action key={`${pot}_${id}`} variant="dark" onClick={() => handleClick(pot)}>
+            <ListGroup.Item action key={`${pot}_${id}`} variant="dark" onClick={() => handleClick(pot.name)}>
                 {pot.name}
             </ListGroup.Item>)}
         </ListGroup>

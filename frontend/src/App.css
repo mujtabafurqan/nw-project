@@ -1,5 +1,13 @@
+p,h1,h2,h3,h4,h5,h6 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .App {
   /* text-align: center; */
+  background: #fcfcfc;
 }
 
 .App-logo {
@@ -44,4 +52,16 @@
 .main-container {
   width: clamp(90%, 50vh,750px);
   margin: auto;
+}
+
+@media (min-height: 300px) {
+  .App-header {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.page-title {
+  font-weight: 200;
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import './styles/helper.css';
+import './styles/helper.scss';
 import NavBarComponent from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import ListPots from './components/ListPots/ListPots';

@@ -1,9 +1,11 @@
 .home{
-text-align: center;
-padding: 20px;
-display: flex;
-justify-content: space-between;
-max-width: 400px;
-margin: auto;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: auto;
 }
 
